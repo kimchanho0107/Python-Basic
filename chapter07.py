@@ -97,6 +97,36 @@ while d <= num:
         d = d + 1
 
 # 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-3 8월 달력 출력하기 
+print("\t\t<8월 달력>\t\t")
+print("일\t월\t화\t수\t목\t금\t토\t")
+day = 1
+while day < 32:
+    if day == 1:
+        print(f"\t{day}", end="\t")
+        day = day + 1
+    print(f"{day}", end="\t")
+    day = day + 1
+    if day % 7 == 0:
+        print()
 
-
-# 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-8 BMI 전자레인지 시간 설정하기 
+# 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-8 전자레인지 시간 설정하기
+total, minute, second = 0, 0, 0
+while(1):
+    n = int(input("원하는 버튼의 숫자를 입력해주세요.:"))
+    if n == 1:
+        total = total + 10
+    elif n == 2:
+        total = total + 30
+    elif n == 3:
+        total = total + 60
+    elif n == 4:
+        total = total + 600
+    elif n == 5:
+        break
+    else:
+        print("잘못된 입력입니다.")
+    if total >= 60:
+        minute = (total // 60)
+        second = (total % 60)
+        print("%d:%02d" % (minute, second))
+print("\n전자레인지를 작동합니다.")
