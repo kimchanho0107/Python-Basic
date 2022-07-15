@@ -61,12 +61,31 @@ my_name = "제 이름은 김찬호입니다."
 print(my_name[6:9])
 
 # 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-1 영어 문장 대소문자 올바르게 사용하기
+sentence = input("문장을 입력해 주세요.:")
+sentence = sentence.lower().split(".")
+answer = []
+for s in sentence:
+    s = s.capitalize()
+    if s in "i'":
+        s = s.replace("i'","I'")
+        answer.append(s)
+    elif s in " i ":
+        s = s.replace(" i "," I ")
+        answer.append(s)
+    elif s in "i ":
+        s = s.replace("i ","I ")
+        answer.append(s)
+    elif s in " i":
+        s = s.replace(" i"," I")
+        answer.append(s)
+    else:
+        answer.append(s)
+print(".".join(answer))
 
 
 # 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-2 자릿수의 합이 가장 큰 수 찾기
 
 # 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-4 두 숫자 사이의 n의 배수 찾기
-
 
 # 선택 과제: Part2 변수와 함께 만드는 나의 첫 포트폴리오 - chapter3 난이도 상 프로젝트 - 3-9 가운데 글자 찾기
 
